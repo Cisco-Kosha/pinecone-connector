@@ -1,0 +1,50 @@
+{
+    "version": "2.0.0",
+    "fields": [
+      {
+        "field": "API_KEY_HEADER_NAME",
+        "displayName": "Pinecone API Key Header Name",
+        "type": "String",
+        "minLength": 4,
+        "maxLength": 100,
+        "required": true,
+        "description": "Pinecone API Key Header Name",
+        "default": "Api-Key",
+        "example": "Api-Key"
+      },
+      {
+        "field": "API_KEY",
+        "displayName": "Pinecone API Key",
+        "type": "String",
+        "minLength": 4,
+        "maxLength": 100,
+        "required": true,
+        "description": "Pinecone API Key",
+        "example": "NPfWE2p1H7yBzIXnRB",
+        "helpSection": "Login to your Pinecone account \n Go to Dashboard -> Edit Profile \n To the right side, you should see the personal access token generated associated with your user account"
+      },
+      {
+        "field": "AUTH_TYPE",
+        "displayName": "Pinecone Auth Type",
+        "type": "String",
+        "minLength": 4,
+        "maxLength": 60,
+        "required": true,
+        "description": "Pinecone API Auth Type",
+        "default": "API_KEY",
+        "example": "API_KEY",
+        "helpSection": "To use Pinecone, you must have an API key. To find your API key, open the Pinecone console and click API Keys. This view also displays the environment for your project. Note both your API key and your environment."
+      },
+      {
+        "field": "SERVER_URL",
+        "displayName": "Pinecone Server URL",
+        "type": "String",
+        "minLength": 4,
+        "maxLength": 60,
+        "required": true,
+        "description": "Pinecone API Server URL ",
+        "example": "https://controller.YOUR_ENVIRONMENT.pinecone.io",
+        "helpSection": "Open the Pinecone console and click API Keys. This view also displays the environment for your project. Note both your API key and your environment."
+      }
+    ]
+  }
