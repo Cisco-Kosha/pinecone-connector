@@ -11,6 +11,9 @@
   "paths": {
     "/describe_index_stats": {
       "post": {
+        "tags": [
+          "Vector Operations"
+        ],
         "summary": "Get statistics about an index's contents",
         "description": "Returns statistics about the index's contents, including the vector count per namespace and the number of dimensions.",
         "operationId": "describeIndexStats",
@@ -95,6 +98,9 @@
     },
     "/query": {
       "post": {
+        "tags": [
+          "Vector Operations"
+        ],
         "summary": "Search for similar vectors in a namespace",
         "description": "Searches a namespace using a query vector and retrieves the IDs of the most similar items, along with their similarity scores.",
         "operationId": "query",
@@ -189,6 +195,9 @@
     },
     "/vectors/delete": {
       "post": {
+        "tags": [
+          "Vector Operations"
+        ],
         "summary": "Delete vectors by ID from a namespace",
         "description": "Deletes vectors by their ID from a single namespace.",
         "operationId": "deleteVectors",
@@ -249,6 +258,9 @@
     },
     "/vectors/fetch": {
       "get": {
+        "tags": [
+          "Vector Operations"
+        ],
         "summary": "Fetch vectors by ID from a namespace",
         "description": "Fetches vectors by their ID from a single namespace.",
         "operationId": "fetchVectors",
@@ -345,6 +357,9 @@
     },
     "/vectors/update": {
       "post": {
+        "tags": [
+          "Vector Operations"
+        ],
         "summary": "Update vectors in a namespace",
         "description": "Updates vectors by their ID in a single namespace.",
         "operationId": "updateVectors",
@@ -427,6 +442,9 @@
     },
     "/vectors/upsert": {
       "post": {
+        "tags": [
+          "Vector Operations"
+        ],
         "summary": "Upsert vectors into a namespace",
         "description": "Writes vectors into a single namespace. If a new value is upserted for an existing vector ID, it will overwrite the previous value.",
         "operationId": "upsertVectors",
@@ -510,6 +528,9 @@
     },
     "/collections": {
       "get": {
+        "tags": [
+          "Index Operations"
+        ],
         "summary": "Get a list of Pinecone collections",
         "description": "Returns a list of all Pinecone collections associated with the current user.",
         "operationId": "getCollections",
@@ -561,6 +582,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Index Operations"
+        ],
         "summary": "Create a Pinecone collection",
         "description": "Creates a new Pinecone collection associated with the current user.",
         "operationId": "createCollection",
@@ -634,6 +658,9 @@
     },
     "/collections/{collectionName}": {
       "get": {
+        "tags": [
+          "Index Operations"
+        ],
         "summary": "Get information about a Pinecone collection",
         "description": "Returns information about the specified Pinecone collection associated with the current user.",
         "operationId": "describeCollection",
@@ -691,6 +718,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Index Operations"
+        ],
         "summary": "Delete a Pinecone collection",
         "description": "Deletes the specified Pinecone collection associated with the current user.",
         "operationId": "deleteCollection",
@@ -727,6 +757,9 @@
     },
     "/databases": {
       "get": {
+        "tags": [
+          "Index Operations"
+        ],
         "summary": "List Pinecone indexes",
         "description": "Returns a list of all the Pinecone indexes associated with the current user.",
         "operationId": "listIndexes",
@@ -780,6 +813,9 @@
         }
       },
       "post": {
+        "tags": [
+          "Index Operations"
+        ],
         "summary": "Create a Pinecone index",
         "description": "Creates a new Pinecone index associated with the current user.",
         "operationId": "createIndex",
@@ -864,6 +900,9 @@
     },
     "/databases/{indexName}": {
       "get": {
+        "tags": [
+          "Index Operations"
+        ],
         "summary": "Describe a Pinecone index",
         "description": "Returns a description of the specified Pinecone index associated with the current user.",
         "operationId": "describeIndex",
@@ -939,6 +978,9 @@
         }
       },
       "delete": {
+        "tags": [
+          "Index Operations"
+        ],
         "summary": "Delete a Pinecone index",
         "description": "Deletes the specified Pinecone index associated with the current user.",
         "operationId": "deleteIndex",
