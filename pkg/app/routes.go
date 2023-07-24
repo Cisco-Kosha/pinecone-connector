@@ -2,6 +2,7 @@ package app
 
 import (
 	"encoding/json"
+	"fmt"
 	"github.com/kosha/pinecone-connector/pkg/httpclient"
 	httpSwagger "github.com/swaggo/http-swagger"
 	"net/http"
@@ -14,6 +15,16 @@ const (
 
 var vectorOperationsPaths = []string{
 	"/describe_index_stats", "/query", "/vectors",
+}
+
+func hasPrefix(s []string, str string) bool {
+	for _, v := range s {
+		if strings.HasPrefix(str, v) {
+			return false
+		}
+	}
+
+	return true
 }
 
 func (a *App) commonMiddleware() http.Handler {
@@ -32,10 +43,9 @@ func (a *App) commonMiddleware() http.Handler {
 		serverUrl := a.Cfg.GetServerURL()
 		requestUri := r.RequestURI
 		// if the user is executing any of the index operations endpoint, change the server url
-		for _, path := range vectorOperationsPaths {
-			if !strings.HasPrefix(requestUri, path) {
-				serverUrl = "https://controller." + a.Cfg.GetEnv() + ".pinecone.io"
-			}
+		fmt.Println(requestUri)
+		if hasPrefix(vectorOperationsPaths, requestUri) {
+			serverUrl = "https://controller." + a.Cfg.GetEnv() + ".pinecone.io"
 		}
 		method := r.Method
 		queryParams := r.URL.Query().Encode()
