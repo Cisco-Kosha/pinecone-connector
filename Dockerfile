@@ -1,5 +1,5 @@
 FROM docker.io/golang:alpine as builder
-RUN apk add git
+RUN apk add git curl
 RUN mkdir /build
 ADD . /build/
 WORKDIR /build
